@@ -24,8 +24,12 @@ public class GerenciadorAeronaves {
         
     }
 
-//Busca as aeronaves por código. Ainda não completa.
+//Busca as aeronaves por código.
     public Aeronave buscarPorCodigo(String cod){
+        for(Aeronave aviao: aeronaves){
+            if(aviao.getCodigo() == cod)
+                return aviao;
+        }
         return null;
     }
 
