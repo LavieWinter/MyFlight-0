@@ -19,7 +19,7 @@ public class GerenciadorAeronaves {
     }
 
 //Lista as aeronaves
-    private ArrayList<Aeronave> listarTodas(){
+    public ArrayList<Aeronave> listarTodas(){
         return aeronaves;
         
     }

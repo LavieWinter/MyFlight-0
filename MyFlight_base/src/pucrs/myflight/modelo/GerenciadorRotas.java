@@ -14,13 +14,13 @@ public class GerenciadorRotas {
         rotas.add(rota);
     }
 
-    private ArrayList<Rota> listarTodas(){
+    public ArrayList<Rota> listarTodas(){
         return rotas;
     }
 
 
     //percebi que essa é meio complicada. vou pesquisar mais antes de fazer.
-    private ArrayList<Rota> buscarPorOrigem(Aeroporto orig){
+    public ArrayList<Rota> buscarPorOrigem(Aeroporto orig){
         return null;
     }
 
