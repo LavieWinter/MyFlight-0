@@ -18,6 +18,14 @@ public class Voo {
 		this.duracao = duracao;
 		this.status = Status.CONFIRMADO; // default é confirmado
 	}
+
+	//Fiz exercício 1 da parte 3, mas não testei ainda - Lavi
+
+	public Voo(Rota rota, Duration duracao){
+		this.rota = rota;
+		this.duracao = duracao;
+		LocalDateTime.of(2016, 8, 12, 12, 0);
+	}
 	
 	public Rota getRota() {
 		return rota;
