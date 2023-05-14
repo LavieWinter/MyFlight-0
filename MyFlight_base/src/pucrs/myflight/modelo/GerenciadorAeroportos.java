@@ -10,8 +10,23 @@ public class GerenciadorAeroportos {
         aeroportos = new ArrayList<>();
     }
 
-    
+    public void adicionar(Aeroporto aeroporto){
+        aeroportos.add(aeroporto);
+    }
 
+    public ArrayList<Aeroporto> listarTodos(){
+        return aeroportos;
+    }
+
+
+
+    public Aeroporto buscarporCodigo(String cod){
+        for (Aeroporto aeroporto : aeroportos){
+            if(aeroporto.getCodigo() == cod){
+                return aeroporto;
+            }
+        }
+        return null;
+    }
 
 }
-// Matheus
