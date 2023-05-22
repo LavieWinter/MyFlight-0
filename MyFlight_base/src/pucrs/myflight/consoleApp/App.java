@@ -3,6 +3,7 @@ package pucrs.myflight.consoleApp;
 import pucrs.myflight.modelo.Aeronave;
 import pucrs.myflight.modelo.Aeroporto;
 import pucrs.myflight.modelo.CiaAerea;
+import pucrs.myflight.modelo.Geo;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
 
@@ -69,5 +70,16 @@ public class App {
 		System.out.println(v2);
 		System.out.println(v3);
 		
+		//Teste da classe Geo: POA e GRU STATIC
+		Geo g0 = new Geo(-30.0277, -51.2287);
+		Geo g1 = new Geo(-23.413,  -46.4445);
+
+		double calculo = Geo.distancia(g0, g1);
+
+		System.out.println(calculo);
+		
+		// NÂO STATIC
+
+		System.out.println(g0.caldis(g1));
 	}
 }
