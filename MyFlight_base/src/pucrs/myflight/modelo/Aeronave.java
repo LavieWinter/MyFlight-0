@@ -3,6 +3,7 @@ package pucrs.myflight.modelo;
 public class Aeronave implements Contavel{
 	private String codigo;
 	private String descricao;
+	public int capacidade;
 	private static int contador = 0;
 	
 	public Aeronave(String codigo, String descricao) {
@@ -16,6 +17,11 @@ public class Aeronave implements Contavel{
 	
 	public String getDescricao() {
 		return descricao;
+	}
+
+	@Override
+	public String toString() {
+		return "Codigo: " + codigo + " Descrição: " + descricao + " Capacidade: " + capacidade;
 	}
 
 	@Override
