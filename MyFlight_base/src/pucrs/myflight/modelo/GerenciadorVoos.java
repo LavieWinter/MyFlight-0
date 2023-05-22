@@ -17,10 +17,15 @@ public class GerenciadorVoos {
         return voos;
     }
 
-    /*
-    public Voo buscarPorData(data LocalDate){
-        
+    
+    public ArrayList<Voo> buscarPorData(String date){
+        ArrayList<Voo> resultado = new ArrayList<>();
+            for(int i = 0; i< voos.size(); i++){
+                if(voos.get(i).getDatahora().equals(date))
+                    resultado.add(voos.get(i));
+            }
+            return resultado;
     }
-     */
+    
 }
 
