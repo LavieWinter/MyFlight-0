@@ -27,4 +27,11 @@ public class GerenciadorRotas {
 		return resultado;
 	}
 
+    public void addOrdenado(Rota rota){
+        int i = 0;
+        while(i < rotas.size() && rota.getCia().getNome().compareTo(rotas.get(i).getCia().getNome()) > 0){
+            i++;
+        }
+        rotas.add(rota);
+    }
 }
