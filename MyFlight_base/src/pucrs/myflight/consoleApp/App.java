@@ -4,6 +4,8 @@ import pucrs.myflight.modelo.Aeronave;
 import pucrs.myflight.modelo.Aeroporto;
 import pucrs.myflight.modelo.CiaAerea;
 import pucrs.myflight.modelo.Geo;
+import pucrs.myflight.modelo.GerenciadorAeroportos;
+import pucrs.myflight.modelo.GerenciadorRotas;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
 
@@ -12,6 +14,8 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("\nMyFlight project...");
 
+		GerenciadorAeroportos listaAero = new GerenciadorAeroportos();
+		GerenciadorRotas listaRotas = new GerenciadorRotas();
 		//Passando valores das companinhas aéreas
 
 		CiaAerea ca1 = new CiaAerea("JJ", "LATAM Linhas Aéreas");
@@ -48,6 +52,18 @@ public class App {
 		System.out.println(ae3);
 		System.out.println(ae4);
 
+		//adicionando aeroportos na lista de forma ordenada
+		listaAero.addOrdenado(ae1);
+		listaAero.addOrdenado(ae2);
+		listaAero.addOrdenado(ae3);
+		listaAero.addOrdenado(ae4);
+		System.out.println("\n------------aeroportos ordenados--------------");
+		//para ver se a lista está ordenada
+		for(Aeroporto aeroporto : listaAero.listarTodos()){
+			System.out.println(aeroporto);
+		}
+		System.out.println("------------aeroportos ordenados--------------\n");
+
 		//Pasando valores de rotas
 		Rota r1 = new Rota(ca2, ae2, ae1, a4);//Trocar a4 por 738
 		Rota r2 = new Rota(ca2, ae1, ae2, a4);//trocar a4 por 738
@@ -59,6 +75,19 @@ public class App {
 		System.out.println(r2);
 		System.out.println(r3);
 		System.out.println(r4);
+		//rotas adicionadadas a lista usando o método de ordenação por CiaAérea
+		listaRotas.addOrdenado(r4);
+		listaRotas.addOrdenado(r2);
+		listaRotas.addOrdenado(r3);
+		listaRotas.addOrdenado(r1);
+		System.out.println("\n------------rotas ordenadas--------------");
+		//para ver se a lista está ordenada
+		for(Rota rota : listaRotas.listarTodas()){
+			System.out.println(rota);
+		}
+		System.out.println("------------aeroportos ordenados--------------\n");
+
+
 
 		//Passando valores de vooa
 		Voo v1 = new Voo(r1,null );// Mudar Valores

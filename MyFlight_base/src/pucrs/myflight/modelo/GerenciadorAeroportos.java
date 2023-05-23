@@ -18,8 +18,6 @@ public class GerenciadorAeroportos {
         return aeroportos;
     }
 
-
-
     public Aeroporto buscarporCodigo(String cod){
         for (Aeroporto aeroporto : aeroportos){
             if(aeroporto.getCodigo() == cod){
@@ -27,6 +25,14 @@ public class GerenciadorAeroportos {
             }
         }
         return null;
+    }
+    
+    public void addOrdenado(Aeroporto aeroporto){
+        int i = 0;
+        while(i < aeroportos.size() && aeroporto.getNome().compareTo(aeroportos.get(i).getNome()) > 0){
+            i++;
+        }
+        aeroportos.add(i, aeroporto);
     }
 
 }
