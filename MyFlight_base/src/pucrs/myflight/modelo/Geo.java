@@ -67,5 +67,6 @@ public class Geo {
         d = 2 * 6371 * Math.asin(Math.sqrt(d));
 		return d;
 
+        
 	}
 }
