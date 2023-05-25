@@ -35,4 +35,7 @@ public class GerenciadorCias {
 		}
 		return null;
 	}
+    public static GerenciadorCias getInstance() {
+        return null;
+    }
 }

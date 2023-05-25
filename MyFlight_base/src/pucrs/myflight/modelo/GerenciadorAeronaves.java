@@ -33,5 +33,9 @@ public class GerenciadorAeronaves {
         return null;
     }
 
+    public static GerenciadorAeronaves getInstance() {
+        return null;
+    }
+
 }
 
