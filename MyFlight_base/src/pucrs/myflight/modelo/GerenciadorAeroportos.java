@@ -53,6 +53,8 @@ public class GerenciadorAeroportos {
 
                 Geo loc = new Geo(latitude, longitude);
                 Aeroporto aeroporto = new Aeroporto(dados[0], dados[3], loc);
+
+                adicionar(aeroporto);
             }
         }
         catch (IOException x) {

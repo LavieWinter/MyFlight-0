@@ -46,7 +46,7 @@ public class GerenciadorRotas {
         GerenciadorCias empresas = GerenciadorCias.getInstance();
         GerenciadorAeroportos aeroportos = GerenciadorAeroportos.getInstance();
         GerenciadorAeronaves aeronaves = GerenciadorAeronaves.getInstance();
-        Path path1 = Paths.get("src/pucrs/myflight/modelo/Files");
+        Path path1 = Paths.get("src/pucrs/myflight/modelo/Files/routes");
         try (BufferedReader reader = Files.newBufferedReader(path1, Charset.forName("utf8"))) {
             String line = null;
             while ((line = reader.readLine()) != null) {

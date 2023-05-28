@@ -6,9 +6,10 @@ public class Aeronave implements Contavel{
 	public int capacidade;
 	private static int contador = 0;
 	
-	public Aeronave(String codigo, String descricao) {
+	public Aeronave(String codigo, String descricao, int capacidade) {
 		this.codigo = codigo;
 		this.descricao = descricao;
+		this.capacidade = capacidade;
 	}
 	
 	public String getCodigo() {

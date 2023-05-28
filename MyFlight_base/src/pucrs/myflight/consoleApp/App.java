@@ -4,6 +4,7 @@ import pucrs.myflight.modelo.Aeronave;
 import pucrs.myflight.modelo.Aeroporto;
 import pucrs.myflight.modelo.CiaAerea;
 import pucrs.myflight.modelo.Geo;
+import pucrs.myflight.modelo.GerenciadorAeronaves;
 import pucrs.myflight.modelo.GerenciadorAeroportos;
 import pucrs.myflight.modelo.GerenciadorRotas;
 import pucrs.myflight.modelo.Rota;
@@ -16,6 +17,7 @@ public class App {
 
 		GerenciadorAeroportos listaAero = new GerenciadorAeroportos();
 		GerenciadorRotas listaRotas = new GerenciadorRotas();
+		GerenciadorAeronaves readAeronaves = new GerenciadorAeronaves();
 		//Passando valores das companinhas aéreas
 
 		CiaAerea ca1 = new CiaAerea("JJ", "LATAM Linhas Aéreas");
@@ -30,10 +32,13 @@ public class App {
 
 		//Passando valores das aeronaves
 
-		Aeronave a1 = new Aeronave("773", "Boeing 737-300");//Capacidade 140
-		Aeronave a2 = new Aeronave("73G", "Boeing 737-700");//Capacidade 126
-		Aeronave a3 = new Aeronave("380", "Airbus Industrie A380");//Capacidade 644
-		Aeronave a4 = new Aeronave("764", "Boeing 767-400");//Capacidade 304
+		//System.out.println("lendo aeronaves"+ readAeronaves.readFile());
+		//não consegui acertar o caminho até o arquivo
+
+		Aeronave a1 = new Aeronave("773", "Boeing 737-300", 140);
+		Aeronave a2 = new Aeronave("73G", "Boeing 737-700", 126);
+		Aeronave a3 = new Aeronave("380", "Airbus Industrie A380", 644);
+		Aeronave a4 = new Aeronave("764", "Boeing 767-400", 304);
 
 		System.out.println(a1);
 		System.out.println(a2);
@@ -41,6 +46,9 @@ public class App {
 		System.out.println(a4);
 
 		//Pasaando Valores dos aeroportos 
+
+		//System.out.println("lendo aeroportos"+ listaAero.readFile("airports.dat"));
+		//não consegui acertar o caminho até o arquivo
 
 		Aeroporto ae1 = new Aeroporto("POA", "Salgado Filho Intl Apt", null);
 		Aeroporto ae2 = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", null);
