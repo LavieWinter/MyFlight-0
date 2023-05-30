@@ -19,8 +19,6 @@ public class Voo {
 		this.status = Status.CONFIRMADO; // default é confirmado
 	}
 
-	//Fiz exercício 1 da parte 3, mas não testei ainda - Lavi
-
 	public Voo(Rota rota, Duration duracao){
 		this.rota = rota;
 		this.duracao = duracao;

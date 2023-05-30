@@ -9,23 +9,29 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 
 public class GerenciadorRotas {
+    //Classe de gerenciamento de rotas - Lavínia
+    //responsável por métodos de manipulação de rotas
 
     private static final String CharSequence = null;
     private ArrayList<Rota> rotas;
 
+    //Construtor
     public GerenciadorRotas() {
         rotas = new ArrayList<>();
     }
 
+    //Método de adicionar
     public void adicionar(Rota rota) {
         rotas.add(rota);
     }
 
+    //lista todas as rotas
     public ArrayList<Rota> listarTodas() {
         return rotas;
     }
 
-    public ArrayList<Rota> buscarCodigo(String orig) {
+    //busca por origem
+    public ArrayList<Rota> buscarOrigem(String orig) {
         ArrayList<Rota> resultado = new ArrayList<>();
         for (int i = 0; i < rotas.size(); i++) {
             if (rotas.get(i).getOrigem().equals(orig))
@@ -34,6 +40,7 @@ public class GerenciadorRotas {
         return resultado;
     }
 
+    //ordenação
     public void addOrdenado(Rota rota) {
         int i = 0;
         while (i < rotas.size() && rota.getCia().getNome().compareTo(rotas.get(i).getCia().getNome()) > 0) {
@@ -42,6 +49,7 @@ public class GerenciadorRotas {
         rotas.add(rota);
     }
 
+    //leitura de arquivos
     public void carregaDados() throws IOException {
         GerenciadorCias empresas = GerenciadorCias.getInstance();
         GerenciadorAeroportos aeroportos = GerenciadorAeroportos.getInstance();

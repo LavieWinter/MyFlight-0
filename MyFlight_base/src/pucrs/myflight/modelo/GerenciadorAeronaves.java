@@ -7,8 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-// Classe de Gerenciamento de aeronaves
-//Testes ainda por serem feitos
+// Classe de Gerenciamento de aeronaves - Lavínia
 // Manipula os dados da classe "Aeronave"
 public class GerenciadorAeronaves {
 
@@ -39,10 +38,11 @@ public class GerenciadorAeronaves {
         return null;
     }
 
-    public static GerenciadorAeronaves getInstance() {
+   public static GerenciadorAeronaves getInstance() {
         return null;
-    }
-
+   }
+    
+    //leitura de arquivos
     public boolean readFile() {
         Path path1 = Paths.get("src/pucrs/myflight/modelo/Files/equipment");
         try (BufferedReader reader = Files.newBufferedReader(path1, Charset.forName("utf8"))) {
