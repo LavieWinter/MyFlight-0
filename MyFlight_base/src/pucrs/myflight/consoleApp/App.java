@@ -9,6 +9,7 @@ import pucrs.myflight.modelo.GerenciadorAeroportos;
 import pucrs.myflight.modelo.GerenciadorRotas;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
+import pucrs.myflight.modelo.VooDireto;
 
 public class App {
 
@@ -45,13 +46,21 @@ public class App {
 		System.out.println(a3);
 		System.out.println(a4);
 
+		//Teste da classe Geo: POA e GRU STATIC
+		Geo g0 = new Geo(-30.0277, -51.2287);
+		Geo g1 = new Geo(-23.413,  -46.4445);
+
+		double calculo = Geo.distancia(g0, g1);
+
+		System.out.println(calculo);
+
 		//Pasaando Valores dos aeroportos 
 
 		//System.out.println("lendo aeroportos"+ listaAero.readFile("airports.dat"));
 		//não consegui acertar o caminho até o arquivo
 
-		Aeroporto ae1 = new Aeroporto("POA", "Salgado Filho Intl Apt", null);
-		Aeroporto ae2 = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", null);
+		Aeroporto ae1 = new Aeroporto("POA", "Salgado Filho Intl Apt", g0);
+		Aeroporto ae2 = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", g1);
 		Aeroporto ae3 = new Aeroporto("LIS", "Lisbon", null);
 		Aeroporto ae4 = new Aeroporto("MIA", "Miami International Apt", null);
 
@@ -93,27 +102,21 @@ public class App {
 		for(Rota rota : listaRotas.listarTodas()){
 			System.out.println(rota);
 		}
-		System.out.println("------------aeroportos ordenados--------------\n");
+		System.out.println("------------rotas ordenadas--------------\n");
 
 
 
 		//Passando valores de vooa
-		Voo v1 = new Voo(r1,null );// Mudar Valores
-		Voo v2 = new Voo(r2, null);// Mudar Valores
-		Voo v3 = new Voo(r3, null);// Mudar Valores
+		Voo v1 = new VooDireto(r1,null );// Mudar Valores
+		//Voo v2 = new VooDireto(r2, null);// Mudar Valores
+		//Voo v3 = new VooDireto(r3, null);// Mudar Valores
 		
 
 		System.out.println(v1);
-		System.out.println(v2);
-		System.out.println(v3);
+		//System.out.println(v2);
+		//System.out.println(v3);
 		
-		//Teste da classe Geo: POA e GRU STATIC
-		Geo g0 = new Geo(-30.0277, -51.2287);
-		Geo g1 = new Geo(-23.413,  -46.4445);
-
-		double calculo = Geo.distancia(g0, g1);
-
-		System.out.println(calculo);
+		
 		
 		// NÂO STATIC
 
